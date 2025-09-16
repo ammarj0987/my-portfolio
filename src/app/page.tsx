@@ -1,26 +1,31 @@
+import Link from 'next/link'
 
 export default function Home() {
   return (
     <div className="bg-gray-50 text-gray-900 font-sans">
+      {/* navigation bar */}
+      <nav className="w-full py-6 px-8 bg-white shadow-md fixed top-0 left-0 right-0 rounded-b-lg">
+        <div className='flex justify-between items-center'>
+          <div className="text-2xl">
+            <Link href="#home">MA</Link>
+          </div>
+          <ul>
+            <li className="inline-block px-4"><Link href="#projects">Projects</Link></li>
+            <li className="inline-block px-4"><Link href="#resume">Resume</Link></li>
+            <li className="inline-block px-4"><Link href="#contact">Contact</Link></li>
+          </ul>
+        </div>
+        
+      </nav>
       {/* Hero Section */}
-      <section className="h-screen flex flex-col items-center justify-center text-center px-4">
-        <h1
-          // initial={{ opacity: 0, y: -20 }}
-          // animate={{ opacity: 1, y: 0 }}
-          // transition={{ duration: 0.6 }}
-          // className="text-5xl font-bold"
-        >
+      <section id="home" className="h-screen flex flex-col items-center justify-center text-center px-4">
+        <h1 className="text-5xl mb-4">
           Muhammad Ammar
         </h1>
-        <p
-          // initial={{ opacity: 0 }}
-          // animate={{ opacity: 1 }}
-          // transition={{ delay: 0.3, duration: 0.6 }}
-          // className="mt-4 text-xl text-gray-600"
-        >
+        <p>
           Software Engineer | CS @ UW & GTech | Ex-Intern @ Tesla
         </p>
-        <div className="mt-6 flex gap-4">
+        {/* <div className="mt-6 flex gap-4">
           <a
             href="#projects"
             className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition"
@@ -33,10 +38,10 @@ export default function Home() {
           >
             Contact Me
           </a>
-        </div>
+        </div> */}
       </section>
 
-      {/* About Section */}
+      {/* About Section
       <section id="about" className="h-screen max-w-4xl mx-auto py-20 px-4">
         <h2 className="text-3xl font-bold mb-6">About Me</h2>
         <p className="text-lg leading-relaxed text-gray-700">
@@ -45,10 +50,10 @@ export default function Home() {
           complex problems and turning ideas into reality through clean code
           and thoughtful design.
         </p>
-      </section>
+      </section> */}
 
       {/* Projects Section */}
-      <section id="projects" className="h-screen bg-gray-100 py-20 px-4">
+      <section id="projects" className="h-screen bg-gray-100 py-40 px-4">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl font-bold mb-10">Projects</h2>
           <div className="grid md:grid-cols-2 gap-8">
@@ -73,7 +78,7 @@ export default function Home() {
       </section>
 
       {/* Resume Section */}
-      <section id="resume" className="h-screen max-w-4xl mx-auto py-20 px-4">
+      <section id="resume" className="h-screen max-w-4xl mx-auto py-40 px-4">
         <h2 className="text-3xl font-bold mb-6">Resume</h2>
         
       </section>
@@ -81,7 +86,7 @@ export default function Home() {
       {/* Contact Section */}
       <section
         id="contact"
-        className="h-screen bg-blue-600 text-white py-20 px-4 text-center"
+        className="h-screen bg-blue-600 text-white py-40 px-4 text-center"
       >
         <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
         <p className="mb-6">
