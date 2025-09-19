@@ -3,6 +3,7 @@ import Link from 'next/link'
 export default function Home() {
   return (
     <div className="bg-gray-50 text-gray-900 font-sans">
+      
       {/* navigation bar */}
       <nav className="w-full py-6 px-8 bg-white shadow-md fixed top-0 left-0 right-0 rounded-b-lg">
         <div className='flex justify-between items-center'>
@@ -15,30 +16,76 @@ export default function Home() {
             <li className="inline-block px-4"><Link href="#contact">Contact</Link></li>
           </ul>
         </div>
-        
       </nav>
+
       {/* Hero Section */}
-      <section id="home" className="h-screen flex flex-col items-center justify-center text-center px-4">
-        <h1 className="text-5xl mb-4">
+      <section id="home" className="h-screen flex flex-col items-center justify-center text-center gap-4 px-4">
+        <h1 className="text-6xl font-medium">
           Muhammad Ammar
         </h1>
-        <p>
+        <p className='text-lg font-medium text-gray-600'>
           Software Engineer | CS @ UW & GTech | Ex-Intern @ Tesla
         </p>
-        {/* <div className="mt-6 flex gap-4">
+
+        {/* icons */}
+        <div className='flex'>
           <a
+            href="https://www.linkedin.com/in/muhammad-ammar-96776b236/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6"
+          >
+            <img 
+              src="/linkedin-svgrepo-com.svg" 
+              alt="LinkedIn Logo" 
+              className="h-10 w-auto"
+            />
+          </a>
+
+          <a
+            href="/https://github.com/ammarj0987"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6"
+          >
+            <img 
+              src="/github-142-svgrepo-com.svg" 
+              alt="Github Logo" 
+              className="h-10 w-auto"
+            />
+          </a>
+
+          <a
+            href="mailto:muhammadammar.cs@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6"
+          >
+            <img 
+              src="/email-svgrepo-com.svg" 
+              alt="Mail Logo" 
+              className="h-10 w-auto"
+            />
+          </a>
+        </div>
+
+        <div className="flex gap-6">
+          <Link
             href="#projects"
-            className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition"
+            className="text-lg font-semibold text-blue-600 underline-offset-4 hover:underline"
           >
-            View Projects
-          </a>
+            Projects
+          </Link>
+          
           <a
-            href="#contact"
-            className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition"
+            href="/muhammad_ammar_intern_resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-lg font-semibold text-blue-600 underline-offset-4 hover:underline"
           >
-            Contact Me
+            Resume
           </a>
-        </div> */}
+        </div>
       </section>
 
       {/* About Section
@@ -75,12 +122,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Resume Section */}
-      <section id="resume" className="h-screen max-w-4xl mx-auto py-40 px-4">
-        <h2 className="text-3xl font-bold mb-6">Resume</h2>
-        
       </section>
 
       {/* Contact Section */}
