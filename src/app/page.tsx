@@ -1,11 +1,12 @@
 import Link from 'next/link'
+import { projectsList } from './data/projects-meta'
 
 export default function Home() {
   return (
-    <div className="bg-gray-50 text-gray-900 font-sans">
+    <div className="font-sans bg-gradient-to-br from-purple-400 via-indigo-200 to-pink-300">
       
       {/* navigation bar */}
-      <nav className="w-full py-6 px-8 bg-white shadow-md fixed top-0 left-0 right-0 rounded-b-lg">
+      {/* <nav className="w-full py-6 px-8 bg-white shadow-md fixed top-0 left-0 right-0 rounded-b-lg">
         <div className='flex justify-between items-center'>
           <div className="text-2xl">
             <Link href="#home">MA</Link>
@@ -16,29 +17,29 @@ export default function Home() {
             <li className="inline-block px-4"><Link href="#contact">Contact</Link></li>
           </ul>
         </div>
-      </nav>
+      </nav> */}
 
       {/* Hero Section */}
-      <section id="home" className="h-screen flex flex-col items-center justify-center text-center gap-4 px-4">
+      <section id="home" className="h-screen flex flex-col items-center justify-center text-center">
         <h1 className="text-6xl font-medium">
           Muhammad Ammar
         </h1>
-        <p className='text-lg font-medium text-gray-600'>
+        <p className='text-lg font-medium text-gray-600 mt-4'>
           Software Engineer | CS @ UW & GTech | Ex-Intern @ Tesla
         </p>
 
         {/* icons */}
-        <div className='flex'>
+        <div className='flex gap-10 mt-8'>
           <a
             href="https://www.linkedin.com/in/muhammad-ammar-96776b236/"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-6"
+            className="rounded-4xl size-10 items-center justify-center flex bg-gray-100 shadow-lg hover:bg-gray-200 transition duration-300"
           >
             <img 
-              src="/linkedin-svgrepo-com.svg" 
+              src="/linkedin.svg" 
               alt="LinkedIn Logo" 
-              className="h-10 w-auto"
+              className="h-6 w-auto"
             />
           </a>
 
@@ -46,12 +47,12 @@ export default function Home() {
             href="/https://github.com/ammarj0987"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-6"
+            className="rounded-4xl size-10 items-center justify-center flex bg-gray-100 shadow-lg hover:bg-gray-200 transition duration-300"
           >
             <img 
-              src="/github-142-svgrepo-com.svg" 
+              src="/github.svg" 
               alt="Github Logo" 
-              className="h-10 w-auto"
+              className="h-6 w-auto"
             />
           </a>
 
@@ -59,20 +60,20 @@ export default function Home() {
             href="mailto:muhammadammar.cs@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-6"
+            className="rounded-4xl size-10 items-center justify-center flex bg-gray-100 shadow-lg hover:bg-gray-200 transition duration-300"
           >
             <img 
-              src="/email-svgrepo-com.svg" 
+              src="/envelope.svg" 
               alt="Mail Logo" 
-              className="h-10 w-auto"
+              className="h-6 w-auto"
             />
           </a>
         </div>
 
-        <div className="flex gap-6">
+        <div className="flex gap-12 mt-24">
           <Link
             href="#projects"
-            className="text-lg font-semibold text-blue-600 underline-offset-4 hover:underline"
+            className="outline-2 border-blue-400 text-blue-500 px-6 py-3 rounded-lg bg-gray-100 font-semibold shadow-lg hover:bg-gray-200 transition duration-300"
           >
             Projects
           </Link>
@@ -81,7 +82,7 @@ export default function Home() {
             href="/muhammad_ammar_intern_resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-lg font-semibold text-blue-600 underline-offset-4 hover:underline"
+            className="px-6 py-3 rounded-lg bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-semibold shadow-lg hover:opacity-85 transition duration-300"
           >
             Resume
           </a>
@@ -99,18 +100,33 @@ export default function Home() {
         </p>
       </section> */}
 
+      <div className='border-t-8 border-gray-200'></div>
+
       {/* Projects Section */}
-      <section id="projects" className="h-screen bg-gray-100 py-40 px-4">
+      <section id="projects" className="h-screen py-20 px-4">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold mb-10">Projects</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-xl shadow p-6 hover:shadow-lg transition">
+          <h2 className="text-5xl font-bold mb-10">Projects</h2>
+
+          <ul className="space-y-4">
+            {projectsList.map((project) => (
+              <li key={project.slug} className="flex">
+                <h2 className="text-xl font-semibold">{project.title}</h2>
+                <p className="ml-4 text-gray-600">{project.description}</p>
+              </li>
+            ))}
+          </ul>
+          {/* <div className="grid md:grid-cols-2 gap-8">
+
+            <button className="bg-white rounded-xl shadow p-6 hover:shadow-lg transition"
+
+            >
               <h3 className="text-xl font-semibold mb-2">Wheel Classification</h3>
               <p className="text-gray-600">
                 A machine learning web app that helps car enthusiasts identify OEM
                 and aftermarket wheels/rims.
               </p>
-            </div>
+            </button>
+
             <div className="bg-white rounded-xl shadow p-6 hover:shadow-lg transition">
               <h3 className="text-xl font-semibold mb-2">
                 Automotive Social Platform
@@ -120,12 +136,13 @@ export default function Home() {
                 browse others.
               </p>
             </div>
-          </div>
+
+          </div> */}
         </div>
       </section>
 
       {/* Contact Section */}
-      <section
+      {/* <section
         id="contact"
         className="h-screen bg-blue-600 text-white py-40 px-4 text-center"
       >
@@ -144,9 +161,9 @@ export default function Home() {
             LinkedIn
           </a>
         </div>
-      </section>
+      </section> */}
 
-      <footer className="text-center py-6 text-sm text-gray-500">
+      <footer className="bg-white text-center py-6 text-sm text-gray-500">
         © {new Date().getFullYear()} Muhammad Ammar. All rights reserved.
       </footer>
     </div>
