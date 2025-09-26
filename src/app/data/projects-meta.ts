@@ -1,27 +1,32 @@
 // app/data/projects.ts
 export const projectsList = [
   {
-    slug: "wheel-classification",
-    title: "Wheel Classification",
-    description: "ML model and web app to identify OEM and aftermarket wheels.",
+    slug: "car-classification",
+    title: "Car Classification",
+    description: "ML models to classify 196 different car models.",
     tech: ["Python", "TensorFlow", "Next.js"],
   },
   {
-    slug: "car-social-app",
-    title: "Car Social App",
-    description: "A social platform for car enthusiasts to showcase builds.",
+    slug: "reddit-bot",
+    title: "Reddit Bot",
+    description: "A reddit bot to summarize long posts and comments",
     tech: ["Next.js", "TailwindCSS", "MongoDB"],
   },
   {
-    slug: "portfolio-website",
-    title: "Portfolio Website",
-    description: "Personal portfolio built with animations and responsive design.",
+    slug: "uw-pathfinder",
+    title: "UW Pathfinder",
+    description: "A navigation app to find walking paths between campus buildings.",
     tech: ["Next.js", "TailwindCSS", "Framer Motion"],
   },
   {
-    slug: "car-price-prediction",
-    title: "Car Price Prediction",
+    slug: "marvel-connections",
+    title: "Marvel Connections",
     description: "ML model that predicts used car prices with high accuracy.",
     tech: ["Python", "Scikit-learn", "Flask"],
   },
+  {
+    slug: "web-scraper",
+    title: "Web Scraper",
+    description: "A web scraper to find credible performance metrics of professionally tested cars."
+  }
 ];

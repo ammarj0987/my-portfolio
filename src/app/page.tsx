@@ -105,13 +105,19 @@ export default function Home() {
       {/* Projects Section */}
       <section id="projects" className="h-screen py-20 px-4">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-5xl font-bold mb-10">Projects</h2>
+          <h2 className="text-5xl font-bold mb-16">Projects</h2>
 
-          <ul className="space-y-4">
+          <ul className="space-y-12">
             {projectsList.map((project) => (
-              <li key={project.slug} className="flex">
-                <h2 className="text-xl font-semibold">{project.title}</h2>
-                <p className="ml-4 text-gray-600">{project.description}</p>
+              <li key={project.slug} className="flex items-center">
+                <Link 
+                  href={`/projects/${project.slug}`}
+                  className='relative group text-2xl hover:bg-gradient-to-r hover:from-blue-500 to-purple-600 hover:bg-clip-text hover:text-transparent'
+                >
+                  {project.title}
+                  <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-linear-to-r from-blue-500 to-purple-600 transition-all group-hover:w-full"></span>
+                </Link>
+                <p className="text-lg italic ml-4 text-gray-600">- {project.description}</p>
               </li>
             ))}
           </ul>
