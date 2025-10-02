@@ -112,7 +112,7 @@ export default function Home() {
               <li key={project.slug} className="flex items-center">
                 <Link 
                   href={`/projects/${project.slug}`}
-                  className='relative group text-2xl hover:bg-gradient-to-r hover:from-blue-500 to-purple-600 hover:bg-clip-text hover:text-transparent'
+                  className='text-gray-600 font-medium relative group text-2xl hover:bg-gradient-to-r hover:from-blue-500 to-purple-600 hover:bg-clip-text hover:text-transparent'
                 >
                   {project.title}
                   <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-linear-to-r from-blue-500 to-purple-600 transition-all group-hover:w-full"></span>

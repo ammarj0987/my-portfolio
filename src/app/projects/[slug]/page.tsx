@@ -1,6 +1,7 @@
 // app/projects/[slug]/page.tsx
+import Link from 'next/link'
 import React from "react";
-import { projectsList } from '../../data/projects-meta'
+import CarClassification from '@/app/projects/[slug]/car-classification'
 
 interface ProjectPageProps {
   params: { slug: string };
@@ -30,8 +31,32 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   // }
 
   return (
-    <div className="border max-w-3xl mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-4">{slug}</h1>
+    <div className='bg-gray-100 py-6'>
+    <div className="font-sans max-w-4xl mx-auto">
+      {/* nav */}
+      <nav className="flex py-2">
+        <p>&lt;</p>
+        <Link
+          href="/"
+          className='text-blue-600 underline mr-1 ml-1'
+        >
+          home      
+        </Link>
+        /
+        <Link
+          href="/#projects"
+          className='text-blue-600 underline ml-1 mr-1'
+        >
+          projects     
+        </Link>
+        /
+        <p className='ml-1'>{slug}</p>
+      </nav>
+      <div className="rounded-lg bg-gray-200 px-6 py-16">     
+        {/* content */}
+        {slug == "car-classification" ? (<CarClassification />) : (<></>)}
+      </div>
+    </div>
     </div>
   );
 }
