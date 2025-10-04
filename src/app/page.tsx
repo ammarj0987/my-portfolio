@@ -3,7 +3,8 @@ import { projectsList } from './data/projects-meta'
 
 export default function Home() {
   return (
-    <div className="font-sans bg-gradient-to-br from-purple-400 via-indigo-200 to-pink-300">
+    <div className="font-sans"> 
+    {/* // bg-gradient-to-br from-purple-400 via-indigo-200 to-pink-300" */}
       
       {/* navigation bar */}
       {/* <nav className="w-full py-6 px-8 bg-white shadow-md fixed top-0 left-0 right-0 rounded-b-lg">
@@ -20,11 +21,12 @@ export default function Home() {
       </nav> */}
 
       {/* Hero Section */}
-      <section id="home" className="h-screen flex flex-col items-center justify-center text-center">
-        <h1 className="text-6xl font-medium">
+      <section id="home" className="relative h-screen bg-[url(/background.JPG)] bg-center bg-cover bg-no-repeat flex flex-col items-center justify-center text-center">
+        <div className="absolute inset-0 bg-black/60"></div> 
+        <h1 className="relative text-6xl text-white font-medium">
           Muhammad Ammar
         </h1>
-        <p className='text-lg font-medium text-gray-600 mt-4'>
+        <p className='relative text-lg font-medium text-gray-200 mt-4'>
           Software Engineer | CS @ UW & GTech | Ex-Intern @ Tesla
         </p>
 
@@ -34,7 +36,7 @@ export default function Home() {
             href="https://www.linkedin.com/in/muhammad-ammar-96776b236/"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-4xl size-10 items-center justify-center flex bg-gray-100 shadow-lg hover:bg-gray-200 transition duration-300"
+            className="relative rounded-4xl size-10 items-center justify-center flex bg-gray-100 shadow-lg hover:bg-gray-200 transition duration-300"
           >
             <img 
               src="/linkedin.svg" 
@@ -47,7 +49,7 @@ export default function Home() {
             href="/https://github.com/ammarj0987"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-4xl size-10 items-center justify-center flex bg-gray-100 shadow-lg hover:bg-gray-200 transition duration-300"
+            className="relative rounded-4xl size-10 items-center justify-center flex bg-gray-100 shadow-lg hover:bg-gray-200 transition duration-300"
           >
             <img 
               src="/github.svg" 
@@ -60,7 +62,7 @@ export default function Home() {
             href="mailto:muhammadammar.cs@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-4xl size-10 items-center justify-center flex bg-gray-100 shadow-lg hover:bg-gray-200 transition duration-300"
+            className="relative rounded-4xl size-10 items-center justify-center flex bg-gray-100 shadow-lg hover:bg-gray-200 transition duration-300"
           >
             <img 
               src="/envelope.svg" 
@@ -73,7 +75,7 @@ export default function Home() {
         <div className="flex gap-12 mt-24">
           <Link
             href="#projects"
-            className="outline-2 border-blue-400 text-blue-500 px-6 py-3 rounded-lg bg-gray-100 font-semibold shadow-lg hover:bg-gray-200 transition duration-300"
+            className="relative outline-2 border-blue-400 text-blue-500 px-6 py-3 rounded-lg bg-gray-100 font-semibold shadow-lg hover:bg-gray-200 transition duration-300"
           >
             Projects
           </Link>
@@ -82,7 +84,7 @@ export default function Home() {
             href="/muhammad_ammar_intern_resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-3 rounded-lg bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-semibold shadow-lg hover:opacity-85 transition duration-300"
+            className="relative outline-2 px-6 py-3 rounded-lg bg-gray-100 font-semibold shadow-lg hover:bg-gray-200 transition duration-300"
           >
             Resume
           </a>
@@ -100,10 +102,10 @@ export default function Home() {
         </p>
       </section> */}
 
-      <div className='border-t-8 border-gray-200'></div>
+      {/* <div className='border-t-8 border-gray-200'></div> */}
 
       {/* Projects Section */}
-      <section id="projects" className="h-screen py-20 px-4">
+      <section id="projects" className="h-screen bg-gradient-to-b from-neutral-400 via-neutral-300 to-neutral-200 py-20 px-4">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-5xl font-bold mb-16">Projects</h2>
 
@@ -169,7 +171,7 @@ export default function Home() {
         </div>
       </section> */}
 
-      <footer className="bg-white text-center py-6 text-sm text-gray-500">
+      <footer className="bg-gray-200 text-center py-6 text-sm text-gray-500">
         © {new Date().getFullYear()} Muhammad Ammar. All rights reserved.
       </footer>
     </div>
