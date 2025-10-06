@@ -36,7 +36,7 @@ export default function Home() {
             href="https://www.linkedin.com/in/muhammad-ammar-96776b236/"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative rounded-4xl size-10 items-center justify-center flex bg-gray-100 shadow-lg hover:bg-gray-200 transition duration-300"
+            className="relative rounded-4xl size-10 items-center justify-center flex bg-gray-100 shadow-lg hover:bg-gray-400 transition duration-300"
           >
             <img 
               src="/linkedin.svg" 
@@ -49,7 +49,7 @@ export default function Home() {
             href="/https://github.com/ammarj0987"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative rounded-4xl size-10 items-center justify-center flex bg-gray-100 shadow-lg hover:bg-gray-200 transition duration-300"
+            className="relative rounded-4xl size-10 items-center justify-center flex bg-gray-100 shadow-lg hover:bg-gray-400 transition duration-300"
           >
             <img 
               src="/github.svg" 
@@ -62,7 +62,7 @@ export default function Home() {
             href="mailto:muhammadammar.cs@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative rounded-4xl size-10 items-center justify-center flex bg-gray-100 shadow-lg hover:bg-gray-200 transition duration-300"
+            className="relative rounded-4xl size-10 items-center justify-center flex bg-gray-100 shadow-lg hover:bg-gray-400 transition duration-300"
           >
             <img 
               src="/envelope.svg" 
@@ -72,10 +72,10 @@ export default function Home() {
           </a>
         </div>
 
-        <div className="flex gap-12 mt-24">
+        <div className="flex gap-16 mt-24">
           <Link
             href="#projects"
-            className="relative outline-2 border-blue-400 text-blue-500 px-6 py-3 rounded-lg bg-gray-100 font-semibold shadow-lg hover:bg-gray-200 transition duration-300"
+            className="relative outline-2 px-6 py-3 rounded-lg bg-neutral-800 text-gray-100 font-semibold shadow-lg hover:bg-gray-200 hover:text-gray-800 transition duration-300"
           >
             Projects
           </Link>
@@ -84,7 +84,7 @@ export default function Home() {
             href="/muhammad_ammar_intern_resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative outline-2 px-6 py-3 rounded-lg bg-gray-100 font-semibold shadow-lg hover:bg-gray-200 transition duration-300"
+            className="relative outline-2 px-6 py-3 rounded-lg bg-gray-800 text-gray-100 font-semibold shadow-lg hover:bg-gray-200 hover:text-gray-800 transition duration-300"
           >
             Resume
           </a>
@@ -171,7 +171,7 @@ export default function Home() {
         </div>
       </section> */}
 
-      <footer className="bg-gray-200 text-center py-6 text-sm text-gray-500">
+      <footer className="bg-gray-600 text-center py-6 text-sm text-gray-300">
         © {new Date().getFullYear()} Muhammad Ammar. All rights reserved.
       </footer>
     </div>
