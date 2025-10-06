@@ -8,7 +8,7 @@ export default function CarClassification() {
                 href="/https://github.com/ammarj0987"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:bg-white"
+                className=""
                 >
                     <img 
                         src="/github.svg" 

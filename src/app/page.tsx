@@ -21,7 +21,7 @@ export default function Home() {
       </nav> */}
 
       {/* Hero Section */}
-      <section id="home" className="relative h-screen bg-[url(/background.JPG)] bg-center bg-cover bg-no-repeat flex flex-col items-center justify-center text-center">
+      <section id="home" className="relative h-screen bg-[url(/my-portfolio/background.JPG)] bg-center bg-cover bg-no-repeat flex flex-col items-center justify-center text-center">
         <div className="absolute inset-0 bg-black/60"></div> 
         <h1 className="relative text-6xl text-white font-medium">
           Muhammad Ammar
@@ -39,7 +39,7 @@ export default function Home() {
             className="relative rounded-4xl size-10 items-center justify-center flex bg-gray-100 shadow-lg hover:bg-gray-400 transition duration-300"
           >
             <img 
-              src="/linkedin.svg" 
+              src="/my-portfolio/linkedin.svg" 
               alt="LinkedIn Logo" 
               className="h-6 w-auto"
             />
@@ -52,7 +52,7 @@ export default function Home() {
             className="relative rounded-4xl size-10 items-center justify-center flex bg-gray-100 shadow-lg hover:bg-gray-400 transition duration-300"
           >
             <img 
-              src="/github.svg" 
+              src="/my-portfolio/github.svg" 
               alt="Github Logo" 
               className="h-6 w-auto"
             />
@@ -65,7 +65,7 @@ export default function Home() {
             className="relative rounded-4xl size-10 items-center justify-center flex bg-gray-100 shadow-lg hover:bg-gray-400 transition duration-300"
           >
             <img 
-              src="/envelope.svg" 
+              src="/my-portfolio/envelope.svg" 
               alt="Mail Logo" 
               className="h-6 w-auto"
             />

@@ -1,37 +1,30 @@
 // app/projects/[slug]/page.tsx
 import Link from 'next/link'
-import React from "react";
-import CarClassification from '@/app/projects/[slug]/car-classification'
+import { notFound } from "next/navigation";
 
-interface ProjectPageProps {
-  params: { slug: string };
+import CarClassification from '@/app/projects/[slug]/car-classification'
+import RedditBot from '@/app/projects/[slug]/reddit-bot';
+import UWPathfinder from '@/app/projects/[slug]/uw-pathfinder';
+
+import { projectsList } from '../../data/projects-meta'
+
+export async function generateStaticParams() {
+  return projectsList.map((project: any) => ({
+    slug: project.slug,
+  }));
 }
 
-// const projects: Record<string, { title: string; content: string }> = {
-//   "wheel-classification": {
-//     title: "Wheel Classification",
-//     content: "This project uses machine learning to classify car wheels...",
-//   },
-//   "car-social-app": {
-//     title: "Car Social App",
-//     content: "A social platform for car enthusiasts with collections and profiles...",
-//   },
-//   "portfolio-site": {
-//     title: "Portfolio Website",
-//     content: "My personal portfolio built with Next.js, Tailwind, and animations...",
-//   },
-// };
-
-export default async function ProjectPage({ params }: ProjectPageProps) {
-  const { slug } = await params;
+export default async function ProjectPage({ params }: { params: { slug: string } }) {
+  // const { slug } = await params;
   // const project = projects[slug];
+  const project = projectsList.find((p: any) => p.slug === params.slug);
 
-  // if (!project) {
-  //   return <h1 className="text-center mt-10 text-2xl">Project not found</h1>;
-  // }
+  if (!project) {
+    notFound();
+  }
 
   return (
-    <div className='bg-gray-100 py-6'>
+    <div className='min-h-screen bg-gray-100 py-6'>
     <div className="font-sans max-w-4xl mx-auto">
       {/* nav */}
       <nav className="flex py-2">
@@ -50,11 +43,13 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           projects     
         </Link>
         /
-        <p className='ml-1'>{slug}</p>
+        <p className='ml-1'>{project?.slug}</p>
       </nav>
       <div className="rounded-lg bg-gray-200 px-6 py-16">     
         {/* content */}
-        {slug == "car-classification" ? (<CarClassification />) : (<></>)}
+        {project?.slug == "car-classification" ? (<CarClassification />) : (<></>)}
+        {project?.slug == "reddit-bot" ? (<RedditBot />) : (<></>)}
+        {project?.slug == "uw-pathfinder" ? (<UWPathfinder />) : (<></>)}
       </div>
     </div>
     </div>
