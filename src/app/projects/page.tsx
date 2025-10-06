@@ -1,5 +1,4 @@
 // app/projects/page.tsx
-import Link from "next/link";
 
 // const projects = [
 //   { slug: "wheel-classification", title: "Wheel Classification", description: "ML model to identify OEM and aftermarket wheels." },
