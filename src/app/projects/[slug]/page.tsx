@@ -14,7 +14,7 @@ type Project = {
   description: string;
 };
 
-export async function generateStaticParams() {
+export function generateStaticParams() {
   return projectsList.map((project: Project) => ({
     slug: project.slug,
   }));
