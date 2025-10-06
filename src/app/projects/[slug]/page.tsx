@@ -8,8 +8,14 @@ import UWPathfinder from '@/app/projects/[slug]/uw-pathfinder';
 
 import { projectsList } from '../../data/projects-meta'
 
+type Project = {
+  slug: string;
+  title: string;
+  description: string;
+};
+
 export async function generateStaticParams() {
-  return projectsList.map((project: any) => ({
+  return projectsList.map((project: Project) => ({
     slug: project.slug,
   }));
 }
@@ -17,7 +23,7 @@ export async function generateStaticParams() {
 export default async function ProjectPage({ params }: { params: { slug: string } }) {
   // const { slug } = await params;
   // const project = projects[slug];
-  const project = projectsList.find((p: any) => p.slug === params.slug);
+  const project = projectsList.find((p: Project) => p.slug === params.slug);
 
   if (!project) {
     notFound();

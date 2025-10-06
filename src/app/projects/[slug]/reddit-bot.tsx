@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function RedditBot() {
     return (
         <>
@@ -10,7 +12,7 @@ export default function RedditBot() {
                 rel="noopener noreferrer"
                 className=""
                 >
-                    <img 
+                    <Image 
                         src="/github.svg" 
                         alt="Github Logo" 
                         className="h-6 w-auto"

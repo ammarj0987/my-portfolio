@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import Image from 'next/image'
+
 import { projectsList } from './data/projects-meta'
 
 export default function Home() {
@@ -38,7 +40,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="relative rounded-4xl size-10 items-center justify-center flex bg-gray-100 shadow-lg hover:bg-gray-400 transition duration-300"
           >
-            <img 
+            <Image 
               src="/my-portfolio/linkedin.svg" 
               alt="LinkedIn Logo" 
               className="h-6 w-auto"
@@ -51,7 +53,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="relative rounded-4xl size-10 items-center justify-center flex bg-gray-100 shadow-lg hover:bg-gray-400 transition duration-300"
           >
-            <img 
+            <Image 
               src="/my-portfolio/github.svg" 
               alt="Github Logo" 
               className="h-6 w-auto"
@@ -64,7 +66,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="relative rounded-4xl size-10 items-center justify-center flex bg-gray-100 shadow-lg hover:bg-gray-400 transition duration-300"
           >
-            <img 
+            <Image 
               src="/my-portfolio/envelope.svg" 
               alt="Mail Logo" 
               className="h-6 w-auto"
