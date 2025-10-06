@@ -1,5 +1,6 @@
 // app/projects/[slug]/page.tsx
 import Link from 'next/link'
+import { useRouter } from 'next/router';
 import { notFound } from "next/navigation";
 
 import CarClassification from '@/app/projects/[slug]/car-classification'
@@ -20,10 +21,10 @@ export function generateStaticParams() {
   }));
 }
 
-export default function ProjectPage({ params }: { params: { slug: string } }) {
-  // const { slug } = await params;
+export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
   // const project = projects[slug];
-  const project = projectsList.find((p: Project) => p.slug === params.slug);
+  const project = projectsList.find((p: Project) => p.slug === slug);
 
   if (!project) {
     notFound();
@@ -51,6 +52,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         /
         <p className='ml-1'>{project?.slug}</p>
       </nav>
+
       <div className="rounded-lg bg-gray-200 px-6 py-16">     
         {/* content */}
         {project?.slug == "car-classification" ? (<CarClassification />) : (<></>)}
