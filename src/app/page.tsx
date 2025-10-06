@@ -49,7 +49,7 @@ export default function Home() {
           </a>
 
           <a
-            href="/https://github.com/ammarj0987"
+            href="https://github.com/ammarj0987"
             target="_blank"
             rel="noopener noreferrer"
             className="relative rounded-4xl size-10 items-center justify-center flex bg-gray-100 shadow-lg hover:bg-gray-400 transition duration-300"
