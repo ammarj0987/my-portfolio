@@ -43,7 +43,8 @@ export default function Home() {
             <Image 
               src="/my-portfolio/linkedin.svg" 
               alt="LinkedIn Logo" 
-              className="h-6 w-auto"
+              width={24}
+              height={24}
             />
           </a>
 
@@ -56,7 +57,8 @@ export default function Home() {
             <Image 
               src="/my-portfolio/github.svg" 
               alt="Github Logo" 
-              className="h-6 w-auto"
+              width={24}
+              height={24}
             />
           </a>
 
@@ -69,7 +71,8 @@ export default function Home() {
             <Image 
               src="/my-portfolio/envelope.svg" 
               alt="Mail Logo" 
-              className="h-6 w-auto"
+              width={24}
+              height={24}
             />
           </a>
         </div>

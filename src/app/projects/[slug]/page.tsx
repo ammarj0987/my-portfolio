@@ -20,7 +20,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function ProjectPage({ params }: { params: { slug: string } }) {
+export default function ProjectPage({ params }: { params: { slug: string } }) {
   // const { slug } = await params;
   // const project = projects[slug];
   const project = projectsList.find((p: Project) => p.slug === params.slug);

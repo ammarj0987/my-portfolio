@@ -15,7 +15,8 @@ export default function RedditBot() {
                     <Image 
                         src="/github.svg" 
                         alt="Github Logo" 
-                        className="h-6 w-auto"
+                        width={24}
+                        height={24}
                     />
                 </a>
             </div>
