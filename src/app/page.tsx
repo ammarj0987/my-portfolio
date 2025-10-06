@@ -86,7 +86,7 @@ export default function Home() {
           </Link>
           
           <a
-            href="/muhammad_ammar_intern_resume.pdf"
+            href="/my-portfolio/muhammad_ammar_intern_resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="relative outline-2 px-6 py-3 rounded-lg bg-gray-800 text-gray-100 font-semibold shadow-lg hover:bg-gray-200 hover:text-gray-800 transition duration-300"
