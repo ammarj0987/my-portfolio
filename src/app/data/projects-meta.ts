@@ -6,14 +6,14 @@ export const projectsList = [
     description: "ML models to classify 196 different car models.",
   },
   {
-    slug: "reddit-bot",
-    title: "Reddit Bot",
-    description: "A reddit bot to summarize long posts and comments",
-  },
-  {
     slug: "uw-pathfinder",
     title: "UW Pathfinder",
     description: "A navigation app to find walking paths between campus buildings.",
+  },
+  {
+    slug: "reddit-bot",
+    title: "TL;DR Bot",
+    description: "A reddit bot to summarize long posts and comments",
   },
   {
     slug: "marvel-connections",
@@ -22,7 +22,7 @@ export const projectsList = [
   },
   {
     slug: "web-scraper",
-    title: "Web Scraper",
+    title: "Performance Scraper",
     description: "A web scraper to find credible performance metrics of professionally tested cars."
   }
 ];

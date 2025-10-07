@@ -4,13 +4,13 @@ export default function RedditBot() {
     return (
         <>
             <div className="flex justify-between items-center mb-8">
-                <h1 className="text-4xl">Reddit Bot</h1>
+                <h1 className="text-4xl">TL;DR Bot</h1>
 
                 <a
-                href="/https://github.com/ammarj0987"
-                target="_blank"
-                rel="noopener noreferrer"
-                className=""
+                    href="https://github.com/ammarj0987/Tl-dr-Reddit-Bot"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className=""
                 >
                     <Image 
                         src="/github.svg" 

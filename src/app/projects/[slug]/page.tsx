@@ -1,11 +1,13 @@
 // app/projects/[slug]/page.tsx
 import Link from 'next/link'
-import { useRouter } from 'next/router';
-import { notFound } from "next/navigation";
+// import { useRouter } from 'next/router';
+// import { notFound } from "next/navigation";
 
 import CarClassification from '@/app/projects/[slug]/car-classification'
 import RedditBot from '@/app/projects/[slug]/reddit-bot';
 import UWPathfinder from '@/app/projects/[slug]/uw-pathfinder';
+import MarvelConnections from '@/app/projects/[slug]/marvel-connections';
+import WebScraper from '@/app/projects/[slug]/web-scraper';
 
 import { projectsList } from '../../data/projects-meta'
 
@@ -24,11 +26,11 @@ export function generateStaticParams() {
 export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   // const project = projects[slug];
-  const project = projectsList.find((p: Project) => p.slug === slug);
+  // const project = projectsList.find((p: Project) => p.slug === slug);
 
-  if (!project) {
-    notFound();
-  }
+  // if (!project) {
+  //   notFound();
+  // }
 
   return (
     <div className='min-h-screen bg-gray-100 py-6'>
@@ -50,14 +52,16 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           projects     
         </Link>
         /
-        <p className='ml-1'>{project?.slug}</p>
+        <p className='ml-1'>{slug}</p>
       </nav>
 
       <div className="rounded-lg bg-gray-200 px-6 py-16">     
         {/* content */}
-        {project?.slug == "car-classification" ? (<CarClassification />) : (<></>)}
-        {project?.slug == "reddit-bot" ? (<RedditBot />) : (<></>)}
-        {project?.slug == "uw-pathfinder" ? (<UWPathfinder />) : (<></>)}
+        {slug == "car-classification" ? (<CarClassification />) : (<></>)}
+        {slug == "reddit-bot" ? (<RedditBot />) : (<></>)}
+        {slug == "uw-pathfinder" ? (<UWPathfinder />) : (<></>)}
+        {slug == "marvel-connections" ? (<MarvelConnections />) : (<></>)}
+        {slug == "web-scraper" ? (<WebScraper />) : (<></>)}
       </div>
     </div>
     </div>

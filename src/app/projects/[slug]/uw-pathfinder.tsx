@@ -4,12 +4,12 @@ export default function UWPathfinder() {
     return (
         <>
             <div className="flex justify-between items-center mb-8">
-                <h1 className="text-4xl">Car Classification</h1>
+                <h1 className="text-4xl">UW Pathfinder</h1>
                 <a
-                href="/https://github.com/ammarj0987"
-                target="_blank"
-                rel="noopener noreferrer"
-                className=""
+                    href="https://github.com/ammarj0987/UW-Pathfinder"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className=""
                 >
                     <Image 
                         src="/my-portfolio/github.svg" 
