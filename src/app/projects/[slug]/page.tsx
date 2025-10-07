@@ -46,7 +46,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         </Link>
         /
         <Link
-          href="/#projects"
+          href="#projects"
           scroll={false}
           className='text-blue-600 underline ml-1 mr-1'
         >
